@@ -1,0 +1,43 @@
+:TITLE: GNU Bookstore Design
+:AUTHOR: FP Coffee <fpcoffee@socorrofp.org>
+:DATE: 2017-09-19
+
+* Introduction
+
+Richard M. Stallman visited the NMT chapter of the ACM several years ago. During a day trip to the VLA, he described orally to a science-fiction author (name forgotten) a concept for a book store. The salient details recalled are:
+
+1. Readers purchase books with Bitcoin.
+2. You could access the bookstore via Tor or “pay phones.”
+3. Authors would upload books in postscript format, because PDF isn’t “free.”
+
+There are some obvious issues with all three of these directives in conjunction with each other: the idea of purchasing with bitcoin over the phone is frightening, and Postscript is just as free as PDF (i.e. an open standard published by Adobe). So we have some interpreting to do. 
+
+Let’s begin by saying that, with respect to any given technology, there is often an option that supports the GNU philosophy. That technology needn’t be made by the GNU project, or even necessarily GNU-licensed. We will call that technology the “GNU option,” when we are able to identify it.
+
+Upon discussion, we hit upon these as the salient points:
+
+1. It should be possible to purchase books with the free-est, most privacy-supporting or GNU philosophy supporting currency available.
+2. It should be possible to purchase books without browsing to a mainstream website.
+3. Authors should be able to upload books a format that makes a “GNU” compromise between user’s and author’s freedoms and rights.
+
+Now let us create the “poles” of the design space: the least-“GNU” and most-“GNU” options ways to develop this bookstore.
+
+*** Least “GNU” Option
+
+The Least GNU option reuses and plays to the strengths of widely-used technologies. It does not directly support Stallman, and is therefore garbage.
+
+1. There is a bookstore available as a webpage. For bonus points, it is also available as an “onion” domain. For extra bonus points, there is Twilio integration to create a phone menu.
+2. Authors provide a Bitcoin address to receive payments.
+3. When users purchase a book, they send a payment in Bitcoin to the book store, which takes a cut and then sends the remainder to the author of the book.
+4. After purchasing a book, you get a download link on the webpage and emailed to you. The download link is personalized to you, requires you be logged in, and expires after some set time. New download links can be manufactured.
+
+This should feel pretty bog-standard.
+
+*** Most “GNU” Option
+
+The Most GNU option chooses GNU alternatives where they exist and opts to build new systems where they do not exist. It directly supports Stallman’s bizarre usecases.
+
+1. There is a bookstore available via mail client. Users email a specific address with purchase instructions and receive an emailed book in reply.
+2. Bridges to the mail-based system exist to expose it as an .onion domain and via phone, using Asterisk. The FSF is obliged to install a physical PBX to accept calls.
+3. Currency accepted is GNU Taler.
+4. Books are distributed in Infotex format, or a to-be-developed GNU graphical page layout system.
